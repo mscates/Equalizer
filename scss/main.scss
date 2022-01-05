@@ -1,0 +1,116 @@
+// reset
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  font-family: "IBM Plex Sans", sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+// variables
+$green: hsl(177, 68%, 64%);
+$orange: hsl(12, 94%, 65%);
+$yellow: hsl(33, 100%, 70%);
+$white: hsl(20, 33%, 98%);
+$black: hsl(244, 23%, 12%);
+
+.btn {
+  padding: 18px 20px;
+  border-radius: 10px;
+  text-align: center;
+  color: $white;
+}
+
+.container {
+  display: flex;
+  margin: 40px 24px;
+}
+
+.copy-container {
+  flex: 2;
+}
+
+.container .pattern-1 {
+  width: 100%;
+  flex: 1;
+  max-width: 312px;
+  display: none;
+}
+
+.copy-container h1 {
+  margin: 64px 0 20px 0;
+  font-weight: 700;
+  font-size: 40px;
+  letter-spacing: -0.45px;
+}
+
+.copy-container p {
+  max-width: 300px;
+  font-size: 16px;
+}
+
+.middle-container {
+  border-radius: 10px;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr 280px 1fr;
+  grid-template-rows: repeat(9, 1fr);
+  background-color: $black;
+  max-height: 600px;
+  margin-top: 157px;
+}
+
+.middle-container .phone {
+  width: 100%;
+  margin: -98px auto 0;
+  z-index: 2;
+  max-width: 209px;
+  grid-row: 1 / 4;
+  grid-column: 2 / 3;
+}
+
+.middle-container .pattern-2 {
+  text-align: center;
+  width: 100%;
+  max-width: 280px;
+  z-index: 1;
+  grid-row: 1 / 4;
+  grid-column: 2 / 3;
+}
+
+.middle-copy {
+  background-color: $orange;
+  padding: 36px;
+  grid-row: 7 / -1;
+  grid-column: 1 / 4;
+  z-index: 3;
+  margin: -20px 0 -60px 0;
+  border-radius: 10px;
+}
