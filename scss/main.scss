@@ -40,6 +40,7 @@ $orange: hsl(12, 94%, 65%);
 $yellow: hsl(33, 100%, 70%);
 $white: hsl(20, 33%, 98%);
 $black: hsl(244, 23%, 12%);
+
 .btn {
   padding: 18px 20px;
   border-radius: 10px;
@@ -78,19 +79,19 @@ a.btn {
 }
 
 .copy-container {
-  min-width: 327px;
   max-width: 840px;
 }
 
 .copy-container h1 {
   margin: 64px 0 20px 0;
   font-weight: 700;
-  font-size: 40px;
+  font-size: 2.5rem;
   letter-spacing: -0.45px;
+  line-height: 1.1;
 }
 
 .copy-container p {
-  font-size: 16px;
+  font-size: 1rem;
   margin-bottom: 144px;
 }
 
@@ -144,26 +145,26 @@ a.btn {
 
 .middle-copy h2 {
   font-weight: 700;
-  font-size: 32px;
+  font-size: 2rem;
   margin-top: 10px;
 }
 
 .middle-copy p:nth-child(2) {
   font-weight: 400;
-  font-size: 18px;
+  font-size: 1.125rem;
   margin: 10px 0 10px 0;
   line-height: 1.5;
 }
 
 .middle-copy .four {
   font-weight: 700;
-  font-size: 65px;
+  font-size: 4.063rem;
   margin: 0 15px 15px 6px;
 }
 
 .middle-copy .month {
   margin-bottom: 20px;
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 
 .middle-copy .four-container {
@@ -182,15 +183,24 @@ a.btn {
 
 .buttons {
   font-weight: 700;
-  font-size: 18px;
+  font-size: 1.125rem;
 }
 
 .buttons .ios {
   background-color: $black;
 }
 
+.buttons .ios:hover {
+  background-color: $green;
+}
+
 .buttons .android {
   background-color: $white;
+  color: $black;
+}
+
+.buttons .android:hover {
+  background-color: $yellow;
   color: $black;
 }
 
@@ -210,9 +220,13 @@ a.btn {
   top: 5px;
 }
 
+footer {
+  margin-top: 370px;
+}
+
 .footer-container {
   margin-top: 50px;
-  margin-left: 24px;
+  margin: 0 24px;
 }
 
 .footer-container img {
@@ -222,7 +236,7 @@ a.btn {
 
 .footer-container div {
   grid-area: rights;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.5;
   margin-bottom: 50px;
 }
@@ -239,11 +253,19 @@ a.btn {
   margin-top: 40px;
 }
 
-.footer-container .icons img {
+.footer-container .icons img:first-child:hover {
+  filter: invert(64%) sepia(25%) saturate(6279%) hue-rotate(327deg)
+    brightness(102%) contrast(96%);
+}
+
+.footer-container .icons img:not(:last-child) {
   margin-right: 20px;
 }
 
 @media (min-width: 600px) {
+  footer {
+    margin-top: 150px;
+  }
   .container .pattern-1 {
     display: block;
   }
@@ -289,7 +311,7 @@ a.btn {
   .copy-container h1 {
     margin: 95px 0 0 0;
     font-weight: 700;
-    font-size: 64px;
+    font-size: 4rem;
     letter-spacing: -0.73px;
     line-height: 1;
   }
@@ -311,6 +333,7 @@ a.btn {
   .footer-container {
     display: flex;
     justify-content: space-between;
+    margin: 0 33px;
   }
 
   .equal-rights {
@@ -365,19 +388,26 @@ a.btn {
     background-position: -100px -200px;
   }
 }
+
 @media (min-width: 1000px) {
   .middle-container .dark {
     margin: 0 33px;
   }
 }
+
 @media (min-width: 1109px) {
   .middle-container .dark {
-    margin: 0 7%;
+    margin: 0 11.8%;
     max-width: 1110px;
+  }
+
+  .footer-container {
+    max-width: 1110px;
+    margin: 0 11.8%;
   }
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 1440px) {
   .copy-container {
     max-width: 100%;
   }
@@ -389,14 +419,14 @@ a.btn {
   .copy-container h1 {
     margin: 95px 0 0 148px;
     font-weight: 700;
-    font-size: 88px;
+    font-size: 5.5rem;
     letter-spacing: -0.73px;
     line-height: 1;
   }
 
   .image-container p {
     margin: -40px 0 0 165px;
-    font-size: 20px;
+    font-size: 1.125rem;
     padding-right: 0;
     max-width: 860px;
   }
@@ -408,21 +438,21 @@ a.btn {
   }
 
   .middle-copy {
-    grid-row: 3 / 12;
-    margin-left: -25px;
+    margin-left: 4px;
+    left: 72%;
+    top: 15%;
     min-width: 446px;
     min-height: 625px;
     padding: 60px 56px;
-    grid-column: 8 / 18;
   }
 
   .middle-copy h2 {
-    font-size: 40px;
+    font-size: 2.5rem;
     margin: 20px 0 20px 0;
   }
 
   .middle-copy p:nth-child(2) {
-    font-size: 20px;
+    font-size: 1.125rem;
     line-height: 1.7;
   }
 
@@ -435,20 +465,20 @@ a.btn {
   }
 
   .middle-container .phone {
-    margin-left: 237px;
-    margin-top: -210px;
+    top: 17%;
+    margin-left: 4px;
+    left: 23%;
     max-width: 312px;
-    grid-column: 1 / 8;
   }
 
   .middle-container .pattern-2 {
     max-width: 312px;
-    margin-top: -70px;
-    margin-left: -44px;
+    top: 32%;
+    left: 44.6%;
   }
 
   footer {
-    margin-top: 100px;
+    margin-top: 200px;
   }
 
   .footer-container {
