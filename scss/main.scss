@@ -35,7 +35,6 @@ h6 {
 }
 
 // variables
-
 $green: hsl(177, 68%, 64%);
 $orange: hsl(12, 94%, 65%);
 $yellow: hsl(33, 100%, 70%);
@@ -57,6 +56,7 @@ a.btn {
   background-repeat: no-repeat;
   background-position: 20px -200px;
 }
+
 .image-container p {
   padding: 0 24px 70px;
 }
@@ -76,6 +76,7 @@ a.btn {
   top: -75px;
   right: -60px;
 }
+
 .copy-container {
   min-width: 327px;
   max-width: 840px;
@@ -94,54 +95,51 @@ a.btn {
 }
 
 .middle-container {
-  border-radius: 10px;
-  display: grid;
-  justify-content: center;
-  grid-template-columns: repeat(14, 1fr);
-  grid-template-rows: repeat(20, 1fr);
   max-height: 900px;
   margin-top: 120px;
   border-radius: 10px;
 }
 
 .middle-container .dark {
+  position: relative;
   background-color: $black;
   height: 600px;
   border-radius: 10px;
-  grid-column: 1 / -1;
-  grid-row: 1 / 9;
 }
 
 .middle-container .phone {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 100%;
-  margin: -118px auto 0;
   z-index: 2;
   max-width: 209px;
-  grid-row: 1 / 8;
-  grid-column: 4 / 12;
 }
 
 .middle-container .pattern-2 {
   text-align: center;
   width: 100%;
-  // max-width: 280px;
   z-index: 1;
-  grid-row: 1 / 12;
-  grid-column: 3 / 13;
-  margin: 0 auto 100px;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 280px;
 }
 
 .middle-copy {
   background-color: $orange;
   color: $white;
   padding: 36px;
-  grid-row: 9 / 17;
-  grid-column: 1 / -1;
-  z-index: 3;
-  margin-top: -11px;
-  border-radius: 10px;
-  min-height: 546px;
+  position: absolute;
+  top: 375px;
+  left: 50%;
   max-width: 375px;
+  width: 100%;
+  transform: translate(-50%, 0);
+  z-index: 3;
+  border-radius: 10px;
 }
 
 .middle-copy h2 {
@@ -244,48 +242,46 @@ a.btn {
 .footer-container .icons img {
   margin-right: 20px;
 }
-@media (min-width: 450px) {
-  .middle-copy {
-    grid-column: 3 / 13;
-  }
-}
 
 @media (min-width: 600px) {
   .container .pattern-1 {
     display: block;
   }
+
   .middle-container {
     margin-top: -70px;
   }
+
   .middle-container .dark {
     max-width: 696px;
     margin: 0 33px;
   }
+
   .middle-container .phone {
-    margin-top: -132px;
+    top: 150px;
+    left: 29%;
     max-width: 270px;
-    grid-column: 2 / 9;
   }
+
   .middle-container .pattern-2 {
     max-width: 280px;
-    margin-top: -60px;
-    margin-left: 6px;
-    grid-row: 2 / 4;
-    grid-column: 6 / 11;
+    left: 54%;
+    top: 31%;
   }
+
   .middle-copy {
-    margin-left: 13px;
-    margin-top: 19px;
-    grid-row: 5 / 12;
-    min-width: 399px;
-    grid-column: 6 / 13;
+    left: 64%;
+    top: 27%;
+    max-width: 399px;
   }
+
   .image-container {
     background-image: url("../assets/bg-main-tablet.png");
     background-repeat: no-repeat;
     min-height: 808px;
     background-position: -390px -242px;
   }
+
   .container {
     padding: 40px 24px 0;
   }
@@ -297,9 +293,11 @@ a.btn {
     letter-spacing: -0.73px;
     line-height: 1;
   }
+
   .copy-container img {
     margin-top: 22px;
   }
+
   .image-container p {
     margin-top: -20px;
     margin-bottom: 150px;
@@ -309,31 +307,55 @@ a.btn {
   .middle-container {
     max-height: 700px;
   }
+
   .footer-container {
     display: flex;
     justify-content: space-between;
   }
+
   .equal-rights {
     display: flex;
     flex-direction: column;
     max-width: 366px;
   }
+
   .equal-rights .equalizer {
     align-self: flex-start;
   }
+
   .icons img {
     align-self: center;
   }
 }
-@media (min-width: 900px) {
+
+@media (min-width: 800px) {
   .image-container {
     background-image: none;
   }
+
   .middle-container .dark {
-    min-width: 900px;
-    max-width: 1110px;
-    margin: 0 165px;
+    max-width: 1000px;
+    margin: 0 33px;
   }
+
+  .middle-container .phone {
+    top: 150px;
+    left: 29%;
+    max-width: 270px;
+  }
+
+  .middle-container .pattern-2 {
+    max-width: 280px;
+    left: 54%;
+    top: 31%;
+  }
+
+  .middle-copy {
+    left: 64%;
+    top: 27%;
+    max-width: 399px;
+  }
+
   body {
     max-width: 1440px;
     margin: auto;
@@ -343,14 +365,27 @@ a.btn {
     background-position: -100px -200px;
   }
 }
+@media (min-width: 1000px) {
+  .middle-container .dark {
+    margin: 0 33px;
+  }
+}
+@media (min-width: 1109px) {
+  .middle-container .dark {
+    margin: 0 7%;
+    max-width: 1110px;
+  }
+}
 
 @media (min-width: 1400px) {
   .copy-container {
     max-width: 100%;
   }
+
   .copy-container img {
     margin: 62px 0 0 165px;
   }
+
   .copy-container h1 {
     margin: 95px 0 0 148px;
     font-weight: 700;
@@ -365,11 +400,13 @@ a.btn {
     padding-right: 0;
     max-width: 860px;
   }
+
   .container .pattern-1 {
     max-height: 468px;
     top: -85px;
     right: -22px;
   }
+
   .middle-copy {
     grid-row: 3 / 12;
     margin-left: -25px;
@@ -378,20 +415,25 @@ a.btn {
     padding: 60px 56px;
     grid-column: 8 / 18;
   }
+
   .middle-copy h2 {
     font-size: 40px;
     margin: 20px 0 20px 0;
   }
+
   .middle-copy p:nth-child(2) {
     font-size: 20px;
     line-height: 1.7;
   }
+
   section {
     margin-top: 130px;
   }
+
   .middle-copy .four {
     margin: 10px 15px 20px 6px;
   }
+
   .middle-container .phone {
     margin-left: 237px;
     margin-top: -210px;
@@ -404,22 +446,27 @@ a.btn {
     margin-top: -70px;
     margin-left: -44px;
   }
+
   footer {
     margin-top: 100px;
   }
+
   .footer-container {
     max-width: 1110px;
     margin: auto;
   }
+
   .equal-rights {
     flex-direction: row;
     justify-content: space-between;
     max-width: 600px;
     width: 100%;
   }
+
   .rights {
     max-width: 366px;
   }
+
   .footer-container .icons {
     margin-top: -15px;
   }
