@@ -59,7 +59,6 @@ a.btn {
   display: inline-flex;
   padding: 40px 24px 0;
 }
-
 .container .pattern-1 {
   width: 100%;
   max-width: 312px;
@@ -74,7 +73,6 @@ a.btn {
 .copy-container {
   max-width: 840px;
 }
-
 .copy-container h1 {
   margin: 64px 0 20px 0;
   font-weight: 700;
@@ -82,7 +80,6 @@ a.btn {
   letter-spacing: -0.45px;
   line-height: 1.1;
 }
-
 .copy-container p {
   font-size: 1rem;
   margin-bottom: 144px;
@@ -91,9 +88,7 @@ a.btn {
 .middle-container {
   max-height: 900px;
   margin-top: 120px;
-  border-radius: 10px;
 }
-
 .middle-container .dark {
   position: relative;
   background-color: #191826;
@@ -135,79 +130,63 @@ a.btn {
   z-index: 3;
   border-radius: 10px;
 }
-
 .middle-copy h2 {
   font-weight: 700;
   font-size: 2rem;
   margin-top: 10px;
 }
-
 .middle-copy p:nth-child(2) {
   font-weight: 400;
   font-size: 1.125rem;
   margin: 10px 0 10px 0;
   line-height: 1.5;
 }
-
 .middle-copy .four {
   font-weight: 700;
   font-size: 4.063rem;
   margin: 0 15px 15px 6px;
 }
-
 .middle-copy .month {
   margin-bottom: 20px;
   font-size: 1.25rem;
 }
-
 .middle-copy .four-container {
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
-
 .middle-copy .buttons {
   display: flex;
   flex-direction: column;
   gap: 15px;
   width: 100%;
   margin-left: 6px;
-}
-
-.buttons {
   font-weight: 700;
   font-size: 1.125rem;
 }
-
-.buttons .ios {
+.middle-copy .buttons .ios {
   background-color: #191826;
 }
-
-.buttons .ios:hover {
+.middle-copy .buttons .ios:hover {
   background-color: #65e2db;
 }
-
-.buttons .android {
+.middle-copy .buttons .android {
   background-color: #fcf9f8;
   color: #191826;
 }
-
-.buttons .android:hover {
+.middle-copy .buttons .android:hover {
   background-color: #ffba66;
   color: #191826;
 }
-
-.buttons img {
+.middle-copy .buttons img {
   display: inline;
 }
-
-.buttons .ios img {
+.middle-copy .buttons .ios img {
   position: relative;
   left: -7px;
   top: 3px;
 }
-
-.buttons .android img {
+.middle-copy .buttons .android img {
   position: relative;
   left: -7px;
   top: 5px;
@@ -221,35 +200,27 @@ footer {
   margin-top: 50px;
   margin: 0 24px;
 }
-
 .footer-container img {
   margin-bottom: 32px;
   grid-area: equalizer;
 }
-
 .footer-container div {
   grid-area: rights;
   font-size: 1rem;
   line-height: 1.5;
   margin-bottom: 50px;
 }
-
 .footer-container p span {
   font-weight: 700;
 }
-
 .footer-container .icons {
-  grid-column: 1/5;
-  grid-area: icons;
   display: flex;
   justify-content: flex-start;
   margin-top: 40px;
 }
-
 .footer-container .icons img:first-child:hover {
   filter: invert(64%) sepia(25%) saturate(6279%) hue-rotate(327deg) brightness(102%) contrast(96%);
 }
-
 .footer-container .icons img:not(:last-child) {
   margin-right: 20px;
 }
